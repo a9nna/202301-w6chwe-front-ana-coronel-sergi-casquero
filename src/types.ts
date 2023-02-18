@@ -7,7 +7,7 @@ export interface RobotStructure {
 export interface StatsInterface {
   speed: number;
   endurance: number;
-  creationDate: Date;
+  creationDate: number;
 }
 
 export type RobotListStructure = RobotStructure[];
