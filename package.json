@@ -1,5 +1,5 @@
 {
-  "name": "base-redux-toolkit",
+  "name": "robot-manager",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -47,6 +48,6 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.6.0",
     "husky": "^8.0.0",
-    "prettier": "2.8.4"
+    "prettier": "^2.8.4"
   }
 }
