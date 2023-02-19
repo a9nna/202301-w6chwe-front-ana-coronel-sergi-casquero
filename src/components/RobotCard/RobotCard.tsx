@@ -1,9 +1,11 @@
+import RobotCardStyled from "./RobotCardStyled";
+
 const RobotCard = (): JSX.Element => {
   return (
-    <>
+    <RobotCardStyled className="robot-card">
       <div className="robot-card__header">
         <div className="robot-card__header-data">
-          <h3 className="robot-card__title">AstroBot</h3>
+          <h3 className="robot-card__title">Enforcer</h3>
           <span className="robot-card__id">#263781</span>
         </div>
         <button className="robot-card__button--edit">
@@ -27,7 +29,7 @@ const RobotCard = (): JSX.Element => {
           <i className="fa-regular fa-trash-can"></i>
         </button>
       </div>
-    </>
+    </RobotCardStyled>
   );
 };
 
