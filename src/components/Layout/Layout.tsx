@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
+import RobotCard from "../RobotCard/RobotCard";
 
 const Layout = (): JSX.Element => {
   return (
@@ -7,6 +8,7 @@ const Layout = (): JSX.Element => {
       <Header />
       <main>
         <Outlet />
+        <RobotCard />
       </main>
     </>
   );
