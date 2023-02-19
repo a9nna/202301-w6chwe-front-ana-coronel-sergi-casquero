@@ -5,13 +5,20 @@ interface RobotCardProps {
   robot: RobotStructure;
 }
 
-const RobotCard = ({ robot }: RobotCardProps): JSX.Element => {
+const RobotCard = ({
+  robot: {
+    name,
+    id,
+    image,
+    stats: { creationDate, endurance, speed },
+  },
+}: RobotCardProps): JSX.Element => {
   return (
     <RobotCardStyled className="robot-card">
       <div className="robot-card__header">
         <div className="robot-card__header-data">
-          <h3 className="robot-card__title">{robot.name}</h3>
-          <span className="robot-card__id">#{robot.id}</span>
+          <h3 className="robot-card__title">{name}</h3>
+          <span className="robot-card__id">#{id}</span>
         </div>
         <button className="robot-card__button--edit">
           <i className="fa-solid fa-pencil"></i>
@@ -21,14 +28,14 @@ const RobotCard = ({ robot }: RobotCardProps): JSX.Element => {
         className="robot-card__image"
         width="350"
         height="210"
-        src={robot.image}
+        src={image}
         alt="astrobot"
       />
       <div className="robot-card__footer">
         <div className="robot-card__robot-data">
-          <span>Speed: {robot.stats.speed}</span>
-          <span>Endurance: {robot.stats.endurance}</span>
-          <span>Creation Date: {robot.stats.creationDate}</span>
+          <span>Speed: {speed}</span>
+          <span>Endurance: {endurance}</span>
+          <span>Creation Date: {creationDate}</span>
         </div>
         <button className="robot-card__button--remove">
           <i className="fa-regular fa-trash-can"></i>
