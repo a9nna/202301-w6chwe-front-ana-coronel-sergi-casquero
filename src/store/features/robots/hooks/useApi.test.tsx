@@ -14,6 +14,7 @@ jest.mock("../../../../store/hooks", () => ({
 }));
 
 const robot1: RobotStructure = {
+  id: 2,
   name: "",
   image: "",
   stats: {
@@ -23,6 +24,7 @@ const robot1: RobotStructure = {
   },
 };
 const robot2: RobotStructure = {
+  id: 2,
   name: "",
   image: "",
   stats: {
