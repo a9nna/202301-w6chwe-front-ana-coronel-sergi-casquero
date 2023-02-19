@@ -1,12 +1,17 @@
+import { RobotStructure } from "../../types";
 import RobotCardStyled from "./RobotCardStyled";
 
-const RobotCard = (): JSX.Element => {
+interface RobotCardProps {
+  robot: RobotStructure;
+}
+
+const RobotCard = ({ robot }: RobotCardProps): JSX.Element => {
   return (
     <RobotCardStyled className="robot-card">
       <div className="robot-card__header">
         <div className="robot-card__header-data">
-          <h3 className="robot-card__title">Enforcer</h3>
-          <span className="robot-card__id">#263781</span>
+          <h3 className="robot-card__title">{robot.name}</h3>
+          <span className="robot-card__id">#{robot.id}</span>
         </div>
         <button className="robot-card__button--edit">
           <i className="fa-solid fa-pencil"></i>
@@ -16,14 +21,14 @@ const RobotCard = (): JSX.Element => {
         className="robot-card__image"
         width="350"
         height="210"
-        src="https://img.freepik.com/premium-photo/portrait-futuristic-robot-artistic-abstract-steampunk-fantasy-concept-modern-robot_158863-2149.jpg?w=740"
+        src={robot.image}
         alt="astrobot"
       />
       <div className="robot-card__footer">
         <div className="robot-card__robot-data">
-          <span>Speed: 8</span>
-          <span>Endurance: 6</span>
-          <span>Creation Date: 27/12/1989</span>
+          <span>Speed: {robot.stats.speed}</span>
+          <span>Endurance: {robot.stats.endurance}</span>
+          <span>Creation Date: {robot.stats.creationDate}</span>
         </div>
         <button className="robot-card__button--remove">
           <i className="fa-regular fa-trash-can"></i>

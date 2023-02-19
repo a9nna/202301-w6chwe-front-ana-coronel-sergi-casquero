@@ -2,6 +2,7 @@ import { RobotStructure } from "../../../types";
 import { loadRobotListActionCreator, robotsReducer } from "./robotsSlice";
 
 const robot1: RobotStructure = {
+  id: 2,
   name: "",
   image: "",
   stats: {
@@ -11,6 +12,7 @@ const robot1: RobotStructure = {
   },
 };
 const robot2: RobotStructure = {
+  id: 2,
   name: "",
   image: "",
   stats: {
@@ -25,6 +27,7 @@ describe("Given a robotsSlice with its loadRobotList reducer", () => {
   describe("When it receives a list of 2 robots", () => {
     test("Then it should return a list with these 2 robots through the loadRobotListActionCreator", () => {
       const robot1: RobotStructure = {
+        id: 2,
         name: "",
         image: "",
         stats: {
@@ -34,6 +37,7 @@ describe("Given a robotsSlice with its loadRobotList reducer", () => {
         },
       };
       const robot2: RobotStructure = {
+        id: 2,
         name: "",
         image: "",
         stats: {

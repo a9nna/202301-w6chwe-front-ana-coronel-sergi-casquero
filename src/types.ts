@@ -1,4 +1,5 @@
 export interface RobotStructure {
+  id: number;
   name: string;
   image: string;
   stats: StatsInterface;
