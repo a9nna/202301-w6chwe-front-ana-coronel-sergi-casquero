@@ -11,10 +11,8 @@ body {
   color: #fff;
   margin: 0;
   font-family: roboto, sans serif;
-  padding: 30px;
   background-color: #232636;
   min-height:100vh;
-
 }
 
 ul,
@@ -23,6 +21,12 @@ li {
   margin: 0;
   padding: 0;
   list-style: none; 
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 200;
 }
 
 `;
