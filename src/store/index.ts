@@ -3,7 +3,7 @@ import { robotsReducer } from "./features/robots/robotsSlice";
 
 export const store = configureStore({
   reducer: {
-    loadRobotList: robotsReducer,
+    robotsReducer: robotsReducer,
   },
 });
 

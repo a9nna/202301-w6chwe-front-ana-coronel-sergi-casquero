@@ -1,5 +1,4 @@
 import { useCallback } from "react";
-import { RobotListStructure } from "../../../../types";
 import { useAppDispatch } from "../../../hooks";
 import { loadRobotListActionCreator } from "../robotsSlice";
 
@@ -11,9 +10,9 @@ const useApi = () => {
   const getRobotList = useCallback(async () => {
     try {
       const apiResponse = await fetch(apiUrl);
-      const robotList = (await apiResponse.json()) as RobotListStructure;
+      const robotList = await apiResponse.json();
 
-      dispatch(loadRobotListActionCreator(robotList));
+      dispatch(loadRobotListActionCreator(robotList.robots));
     } catch (error) {
       return (error as Error).message;
     }

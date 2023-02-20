@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const RobotCardStyled = styled.article`
-  width: 350px;
-  height: 415px;
+  width: 300px;
+  height: 440px;
   margin-top: 50px;
+  overflow: hidden;
 
   .robot-card {
     &__header {
